@@ -11,3 +11,6 @@
 
 # HELPDESK
 - Заполнение результатов обслуживания клиентов
+
+docker build -t ksbot .
+docker run -d -v $(pwd)/.env:/app/.env ksbot
