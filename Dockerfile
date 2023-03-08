@@ -11,12 +11,12 @@ WORKDIR /app
 
 # Копируем файлы приложения в контейнер
 COPY requirements.txt ./
-COPY *.py ./
+
 
 
 # Устанавливаем зависимости из файла requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-
+COPY *.py ./
 
 # Запускаем приложение
 CMD python bot.py

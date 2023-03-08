@@ -13,4 +13,4 @@
 - Заполнение результатов обслуживания клиентов
 
 docker build -t ksbot .
-docker run -d -v $(pwd)/.env:/app/.env ksbot
+docker run -d --restart=always -v $(pwd)/.env:/app/.env ksbot
