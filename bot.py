@@ -121,8 +121,8 @@ async def process_search(message: types.Message, state: FSMContext):
         data['name'] = message.text
     
     await find_goods(message)
-    await state.finish()
-    await message.reply('Поиск завершен, для нового нажмите /goods', reply_markup=types.ReplyKeyboardRemove())
+    # await state.finish()
+    await message.reply('Если поиск завершен, нажмите /cancel')
 
 # Обработчик команды /orders
 @dp.message_handler(commands=['orders'])
