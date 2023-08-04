@@ -40,7 +40,12 @@ class Form(StatesGroup):
 @dp.message_handler(commands=['start'])
 async def cmd_start(message: Message):
     print(message)
-    await message.reply("Привет! Я бот для работы с вашим бизнесом.")
+    await message.reply("Привет! Я бот для работы с вашим бизнесом.\n"
+                        "/goods - поиск товаров\n"
+                        "/cash - данные кассы\n"
+                        "/orders - поиск заказов\n"
+                        "/helpdesk - техническая поддержка\n"
+                        "/portal - доступ к порталу")
 
 
 # Обработчик команды /help
@@ -149,11 +154,11 @@ async def process_search(message: types.Message, state: FSMContext):
 
 @dp.message_handler(commands=['helpdesk'])
 async def cmd_helpdesk(message: Message):
-	await message.answer("Свяжитесь с нами по телефону 8-918-0-444-262")
+	await message.answer("Свяжитесь с нами по телефону +79180444262")
 
-@dp.message_handler(commands=['portal'])
-async def cmd_portal(message: Message):
-	await message.answer("Перейдите по ссылке http://mu.com.ru")
+# @dp.message_handler(commands=['portal'])
+# async def cmd_portal(message: Message):
+# 	await message.answer("Перейдите по ссылке http://mu.com.ru")
 
 
 
